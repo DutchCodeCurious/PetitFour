@@ -1,0 +1,89 @@
+.dashboard-container {
+  height: 100vh;
+}
+
+.dashboard-header-toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 64px;
+  background: #232428; 
+  color: #f2f2f2;
+  border-bottom: 1px solid #2a2a2a;
+  position: relative;
+
+  .header-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .profile-btn {
+    position: absolute;
+    right: 24px;
+    top: 12px;
+  }
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.dashboard-sidenav {
+  background: #181a1b;
+  color: #f2f2f2;
+  min-width: 220px;
+  padding-top: 2rem;
+  border-right: 1px solid #26282a;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #f2f2f2;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  mat-icon {
+    color: #a970ff;
+    transition: color 0.2s;
+  }
+
+  mat-nav-list a.mat-list-item {
+    font-size: 1.07rem;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+
+    mat-icon {
+      margin-right: 12px;
+      transition: color 0.2s;
+    }
+  }
+}
+  ::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item {
+  transition: background 0.2s, color 0.2s;
+}
+
+::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item:hover,
+::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-focused,
+::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-program-focused {
+  background: #232428 !important;
+}
+
+::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item:hover .mat-list-item-content,
+::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-focused .mat-list-item-content,
+::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-program-focused .mat-list-item-content {
+  color: #a970ff !important;
+}
+
+::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item:hover mat-icon,
+::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-focused mat-icon,
+::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-program-focused mat-icon {
+  color: #fff !important;
+}

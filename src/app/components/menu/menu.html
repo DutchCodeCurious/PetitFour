@@ -1,0 +1,35 @@
+    <!-- 👇 HEADER BAR -->
+    <mat-toolbar color="primary" class="dashboard-header-toolbar">
+      <span class="spacer"></span>
+      <span class="header-title">Petit Four</span>
+      <span class="spacer"></span>
+      <button mat-icon-button class="profile-btn">
+        <mat-icon>person</mat-icon>
+      </button>
+    </mat-toolbar>
+<mat-sidenav-container class="dashboard-container" autosize>
+  <mat-sidenav mode="side" opened class="dashboard-sidenav">
+    <div class="logo">
+      <mat-icon>home</mat-icon>
+      <span>DASHBOARD</span>
+    </div>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/recipes" >
+        <mat-icon>restaurant_menu</mat-icon>
+        Recipes
+      </a>
+      <a mat-list-item routerLink="/favorites" >
+        <mat-icon>favorite</mat-icon>
+        Favorites
+      </a>
+      <a mat-list-item routerLink="/settings" >
+        <mat-icon>settings</mat-icon>
+        Settings
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
