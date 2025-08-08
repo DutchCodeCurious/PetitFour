@@ -3,8 +3,8 @@ type ISODate = string;
 
 export class BaseDTO {
     id: ID;
-    CreatedAt: ISODate;
-    UpdatedAt: ISODate;
+    CreatedAt?: ISODate;
+    UpdatedAt?: ISODate;
     Slug?: string;
 }
 

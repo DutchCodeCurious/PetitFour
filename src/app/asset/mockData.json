@@ -1,0 +1,195 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "displayName": "Alice Johnson",
+      "countryCode": "US",
+      "email": "alice@example.com"
+    },
+    {
+      "id": "u2",
+      "displayName": "Liam Vermeer",
+      "countryCode": "NL",
+      "email": "liam@example.com"
+    }
+  ],
+  "recipes": [
+    {
+      "recipe": {
+        "id": "r1",
+        "title": "Classic Spaghetti Bolognese",
+        "description": "Rich Italian meat sauce served over al dente spaghetti.",
+        "servings": 4,
+        "totalTimeMinutes": 90,
+        "prepTimeMinutes": 20,
+        "cookTimeMinutes": 70,
+        "status": "published",
+        "language": "en",
+        "createdAt": "2025-08-01T10:00:00Z",
+        "updatedAt": "2025-08-06T15:30:00Z"
+      },
+      "author": {
+        "id": "a1",
+        "displayName": "Chef Mario Rossi",
+        "countryCode": "IT"
+      },
+      "cuisine": {
+        "id": "c1",
+        "name": "Italian",
+        "countryCode": "IT"
+      },
+      "tags": [
+        { "id": "t1", "name": "pasta" },
+        { "id": "t2", "name": "comfort food" }
+      ],
+      "media": [
+        {
+          "id": "m1",
+          "type": "image",
+          "url": "/assets/images/spaghetti.jpg",
+          "alt": "Spaghetti Bolognese"
+        }
+      ],
+      "ingredients": [
+        {
+          "foodItemId": "f1",
+          "amount": 500,
+          "unit": "g",
+          "textOverride": "500g ground beef",
+          "order": 1
+        },
+        {
+          "foodItemId": "f2",
+          "amount": 1,
+          "unit": "piece",
+          "textOverride": "Large onion, diced",
+          "order": 2
+        },
+        {
+          "foodItemId": "f3",
+          "amount": 400,
+          "unit": "g",
+          "textOverride": "Canned chopped tomatoes",
+          "order": 3
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Heat oil in a large pan, sauté onions until translucent."
+        },
+        {
+          "order": 2,
+          "text": "Add ground beef and cook until browned."
+        },
+        {
+          "order": 3,
+          "text": "Stir in tomatoes, simmer for 60 minutes."
+        }
+      ],
+      "nutrition": {
+        "per": "serving",
+        "calories": 550,
+        "protein_g": 25,
+        "fat_g": 18,
+        "carbs_g": 70
+      },
+      "userMeta": {
+        "userId": "u1",
+        "recipeId": "r1",
+        "isFavorite": true,
+        "rating": 5,
+        "notes": "Family loves this. Add extra garlic."
+      },
+      "avgRating": 4.8
+    },
+    {
+      "recipe": {
+        "id": "r2",
+        "title": "Vegan Chickpea Curry",
+        "description": "A creamy coconut-based curry packed with chickpeas and veggies.",
+        "servings": 4,
+        "totalTimeMinutes": 40,
+        "prepTimeMinutes": 10,
+        "cookTimeMinutes": 30,
+        "status": "published",
+        "language": "en",
+        "createdAt": "2025-07-15T09:00:00Z",
+        "updatedAt": "2025-07-20T12:45:00Z"
+      },
+      "author": {
+        "id": "a2",
+        "displayName": "Priya Sharma",
+        "countryCode": "IN"
+      },
+      "cuisine": {
+        "id": "c2",
+        "name": "Indian",
+        "countryCode": "IN"
+      },
+      "tags": [
+        { "id": "t3", "name": "vegan" },
+        { "id": "t4", "name": "gluten-free" }
+      ],
+      "media": [
+        {
+          "id": "m2",
+          "type": "image",
+          "url": "/assets/images/chickpea-curry.jpg",
+          "alt": "Chickpea Curry"
+        }
+      ],
+      "ingredients": [
+        {
+          "foodItemId": "f4",
+          "amount": 2,
+          "unit": "cup",
+          "textOverride": "Cooked chickpeas",
+          "order": 1
+        },
+        {
+          "foodItemId": "f5",
+          "amount": 1,
+          "unit": "piece",
+          "textOverride": "Onion, chopped",
+          "order": 2
+        },
+        {
+          "foodItemId": "f6",
+          "amount": 400,
+          "unit": "ml",
+          "textOverride": "Coconut milk",
+          "order": 3
+        }
+      ],
+      "steps": [
+        {
+          "order": 1,
+          "text": "Sauté onion and spices until fragrant."
+        },
+        {
+          "order": 2,
+          "text": "Add chickpeas and coconut milk; bring to a boil."
+        },
+        {
+          "order": 3,
+          "text": "Simmer for 20 minutes and serve with rice."
+        }
+      ],
+      "nutrition": {
+        "per": "serving",
+        "calories": 420,
+        "protein_g": 12,
+        "fat_g": 20,
+        "carbs_g": 48
+      },
+      "userMeta": {
+        "userId": "u2",
+        "recipeId": "r2",
+        "isFavorite": false,
+        "rating": 4
+      },
+      "avgRating": 4.4
+    }
+  ]
+}

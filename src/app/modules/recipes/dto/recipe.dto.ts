@@ -10,6 +10,7 @@ export class RecipeDTO extends BaseDTO {
     CookTimeMinutes?: number;
     CuisineId?: ID; 
     Course?: CourseType;
+    Status?: string;
     SourceId: ID;
     Ingredients: string[];
     Instructions: string;
@@ -27,12 +28,12 @@ export class InstructionStepDTO {
 export class NutritionDTO {
     Per: "serving" | "100g";
     Calories: number;
-    Protein_g: number;
-    Carbs_g: number;
-    Fat_g: number;
-    Fiber_g: number;
-    Sugar_g: number;
-    Sodium_g: number;
+    Protein_g?: number;
+    Carbs_g?: number;
+    Fat_g?: number;
+    Fiber_g?: number;
+    Sugar_g?: number;
+    Sodium_g?: number;
 }
 
 export class CuisineDTO extends BaseDTO {
