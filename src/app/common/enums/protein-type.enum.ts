@@ -1,0 +1,1 @@
+export type ProteinType = "none" | "beef" | "pork" | "chicken" | "turkey" | "lamb" | "fish" | "shellfish" | "plant";

@@ -1,0 +1,1 @@
+export type CourseType = "breakfast" | "lunch" | "dinner" | "dessert" | "snack" | "drink" | "side";

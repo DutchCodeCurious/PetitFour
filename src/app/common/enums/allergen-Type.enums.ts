@@ -1,0 +1,1 @@
+export type AllergenType = "gluten" | "milk" | "eggs" | "fish" | "shellfish" | "tree_nuts" | "peanuts" | "soy" | "sesame" | "mustard" | "celery" | "sulphites" | "lupin" | "molluscs";
