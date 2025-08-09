@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RecipeDTO } from './dto/recipe.dto';
 
 @Component({
   selector: 'app-recipemain',
@@ -8,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class Recipemain {
 
+  constructor() {
+    const recipe: RecipeDTO = new RecipeDTO();
+  }
 }

@@ -1,16 +1,16 @@
 import { BaseDTO, ID } from "../../../common/dto/base.dto";
 
 export class MediaDTO extends BaseDTO {
-    Type: "image" | "video";
-    Url: string;
+    Type?: "image" | "video";
+    Url?: string;
     Alt?: string;
 }
 
 export class SourceDTO extends BaseDTO {
     Type: "book" | "website" | "personal" | "magazine";
-    Title: string;
+    Title?: string;
     Url?: string;
-    AuthorId: ID;
+    AuthorId?: ID;
 }
 
 export class AuthorDTO extends BaseDTO {

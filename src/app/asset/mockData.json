@@ -45,9 +45,9 @@
       "media": [
         {
           "id": "m1",
-          "type": "image",
-          "url": "/assets/images/spaghetti.jpg",
-          "alt": "Spaghetti Bolognese"
+          "Type": "image",
+          "Url": "/assets/images/spaghetti.jpg",
+          "Alt": "Spaghetti Bolognese"
         }
       ],
       "ingredients": [
