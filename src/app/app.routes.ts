@@ -14,8 +14,8 @@ export const routes: Routes = [
             },
             {
                 path: 'recipes',
-                loadComponent: () => {
-                    return import('./modules/foodBook/recipes/recipelist/recipelist').then(m => m.Recipelist);
+                loadChildren: () => {
+                    return import('./modules/foodBook/foodBook.routes').then(m => m.FoodBookRoutes);
                 },
             }
         ]

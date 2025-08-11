@@ -11,21 +11,31 @@
   <mat-sidenav mode="side" opened class="dashboard-sidenav">
     <div class="logo">
       <mat-icon>home</mat-icon>
-      <span>DASHBOARD</span>
     </div>
     <mat-nav-list>
-      <a mat-list-item routerLink="/recipes" >
-        <mat-icon>restaurant_menu</mat-icon>
-        Recipes
-      </a>
-      <a mat-list-item routerLink="/favorites" >
-        <mat-icon>favorite</mat-icon>
-        Favorites
-      </a>
-      <a mat-list-item routerLink="/settings" >
-        <mat-icon>settings</mat-icon>
-        Settings
-      </a>
+<mat-tree #tree [dataSource]="dataSource" [childrenAccessor]="childrenAccessor">
+  <!-- This is the tree node template for leaf nodes -->
+  <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+    <!-- use a disabled button to provide padding for tree leaf -->
+    <button matIconButton disabled  ></button>
+    <a mat-list-item [routerLink]="node.route" >
+      {{node.name}}
+    </a>
+  </mat-tree-node>
+  <!-- This is the tree node template for expandable nodes -->
+  <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding matTreeNodeToggle
+                 [cdkTreeNodeTypeaheadLabel]="node.name">
+    <button matIconButton matTreeNodeToggle
+            [attr.aria-label]="'Toggle ' + node.name">
+      <mat-icon class="mat-icon-rtl-mirror">
+        {{tree.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+      </mat-icon>
+    </button>
+    <a mat-list-item routerLink="/recipes" >
+      {{node.name}}
+    </a>
+  </mat-tree-node>
+</mat-tree>
     </mat-nav-list>
   </mat-sidenav>
 

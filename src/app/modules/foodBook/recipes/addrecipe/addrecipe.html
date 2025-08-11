@@ -1,1 +1,109 @@
+<h1>Add Recipe</h1>
 
+<form [formGroup]="recipeForm" (ngSubmit)="onSubmit()" class="recipe-form">
+  <mat-form-field appearance="outline">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="Title" required>
+    @if (recipeForm.get('Title')?.hasError('required')) {
+      <mat-error>Title is required</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Description</mat-label>
+    <input matInput formControlName="Description" />
+  </mat-form-field>
+
+  <div class="one-line-fields">
+    <mat-form-field appearance="outline">
+      <mat-label>Servings</mat-label>
+      <input matInput formControlName="Servings">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Cuisine</mat-label>
+      <input matInput formControlName="CuisineId">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Course</mat-label>
+      <mat-select formControlName="Course" required>
+        @for (i of courseOptions; track i) {
+          <mat-option [value]="i">{{ i | titlecase }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="one-line-fields">
+    <mat-form-field appearance="outline">
+      <mat-label>Cook Time (minutes)</mat-label>
+      <input type="number" matInput formControlName="CookTimeMinutes">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Prep Time (minutes)</mat-label>
+      <input type="number" matInput formControlName="PrepTimeMinutes">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Total Time (minutes)</mat-label>
+      <input type="number" matInput formControlName="TotalTimeMinutes" readonly>
+    </mat-form-field>
+  </div>
+
+  <!-- INGREDIENTS -->
+  <div formArrayName="Ingredients">
+    <label>Ingredients</label>
+
+    @for (row of Ingredients.controls; track $index; let i = $index) {
+      <div class="ingredient-row" [formGroupName]="i">
+        <mat-form-field appearance="outline">
+          <mat-label>Ingredient</mat-label>
+          <input matInput formControlName="Name" placeholder="e.g., Sugar" />
+          @if (row.get('Name')?.hasError('required')) { <mat-error>Required</mat-error> }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Amount</mat-label>
+          <input type="number" matInput formControlName="Amount" />
+          @if (row.get('Amount')?.hasError('required')) { <mat-error>Required</mat-error> }
+          @if (row.get('Amount')?.hasError('min')) { <mat-error>Must be ≥ 0</mat-error> }
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Unit</mat-label>
+          <mat-select formControlName="Unit">
+            @for (unit of unitOptions; track unit) {
+              <mat-option [value]="unit">{{ unit }}</mat-option>
+            }
+          </mat-select>
+          @if (row.get('Unit')?.hasError('required')) { <mat-error>Required</mat-error> }
+        </mat-form-field>
+
+        <button mat-button type="button" color="warn" (click)="removeIngredient(i)">
+          Remove
+        </button>
+      </div>
+    } @empty {
+      <p class="text-muted">No ingredients yet.</p>
+    }
+
+    <button mat-stroked-button type="button" (click)="addIngredient()">Add Ingredient</button>
+  </div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Instructions</mat-label>
+    <textarea matInput formControlName="Instructions" required></textarea>
+    @if (recipeForm.get('Instructions')?.hasError('required')) {
+      <mat-error>Instructions are required</mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Language</mat-label>
+    <input matInput formControlName="Language">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Add Recipe</button>
+</form>

@@ -1,20 +1,22 @@
-/* styles.scss for Angular v20 + Material 3 */
+// /* styles.scss for Angular v20 + Material 3 */
 
-body {
-  color-scheme: dark;
-  background-color: var(--mat-sys-surface, #181A1B);
-  color: var(--mat-sys-on-surface, #f2f2f2);
-  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
-  margin: 0;
-  min-height: 100vh;
-}
 
-html, body { height: 100%; }
 
-/* Optional: Override Angular Material theme variables for your brand */
-:root {
-  --mat-sys-primary: #4B5DFF;      /* custom blue */
-  --mat-sys-tertiary: #A970FF;     /* custom purple */
-  --mat-sys-surface: #181A1B;      /* dashboard dark background */
-  --mat-sys-on-surface: #f2f2f2;   /* light text on dashboard */
-}
+// body {
+//   color-scheme: dark;
+//   background-color: var(--mat-sys-surface, #181A1B);
+//   color: var(--mat-sys-on-surface, #f2f2f2);
+//   font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+//   margin: 0;
+//   min-height: 100vh;
+// }
+
+// html, body { height: 100%; }
+
+// /* Optional: Override Angular Material theme variables for your brand */
+// :root {
+//   --mat-sys-primary: #4B5DFF;      /* custom blue */
+//   --mat-sys-tertiary: #A970FF;     /* custom purple */
+//   --mat-sys-surface: #181A1B;      /* dashboard dark background */
+//   --mat-sys-on-surface: #f2f2f2;   /* light text on dashboard */
+//}

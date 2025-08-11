@@ -30,9 +30,21 @@ export const Recipes: RecipeDetailDTO[] = [
       Status: 'Published',
       SourceId: 's1',
       Ingredients: [
-        '500g ground beef',
-        '1 large onion, diced',
-        '400g canned chopped tomatoes'
+        {
+          Name: 'ground beef',
+          Amount: 500,
+          Unit: 'g'
+        },
+        {
+          Name: 'onion',
+          Amount: 1,
+          Unit: 'piece'
+        },
+        {
+          Name: 'canned chopped tomatoes',
+          Amount: 400,
+          Unit: 'g'
+        }
       ],
       Instructions:
         'Heat oil in a large pan, sauté onions until translucent. Add ground beef and cook until browned. Stir in tomatoes, simmer for 60 minutes.',
@@ -86,9 +98,21 @@ export const Recipes: RecipeDetailDTO[] = [
       Status: 'Published',
       SourceId: 's2',
       Ingredients: [
-        '2 cups cooked chickpeas',
-        '1 onion, chopped',
-        '400ml coconut milk'
+        {
+          Name: 'cooked chickpeas',
+          Amount: 2,
+          Unit: 'cup'
+        },
+        {
+          Name: 'onion',
+          Amount: 1,
+          Unit: 'piece'
+        },
+        {
+          Name: 'coconut milk',
+          Amount: 400,
+          Unit: 'ml'
+        }
       ],
       Instructions:
         'Sauté onion and spices until fragrant. Add chickpeas and coconut milk; bring to a boil. Simmer for 20 minutes and serve with rice.',

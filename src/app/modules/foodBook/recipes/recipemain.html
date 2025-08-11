@@ -1,1 +1,53 @@
-<p>recipemain works!</p>
+<!-- Expose outlet API to the template -->
+<router-outlet
+  #outlet="outlet"
+  (activate)="onActivate()"
+  (deactivate)="onDeactivate()">
+</router-outlet>
+
+@if (!outlet.isActivated) {
+  <!-- Shown when no child route is active, e.g. /recipes -->
+  <section class="recipes-landing">
+    <div class="dashboard-main">
+      <div class="dashboard-header">
+        <div>
+          <h1>Welcome to Your<br />Recipe Collection</h1>
+          <p>Create and manage your favorite recipes with ease.</p>
+          <button mat-raised-button color="primary" class="add-recipe-btn" routerLink="/recipes/add">
+            <mat-icon>add</mat-icon>
+            Add Recipe
+          </button>
+        </div>
+        <img
+          src="assets/illustration-pot.svg"
+          alt="Cooking Pot"
+          class="dashboard-illustration"
+        />
+      </div>
+      <div class="dashboard-cards">
+        <mat-card class="dashboard-card">
+          <mat-card-title>Total Recipes</mat-card-title>
+          <mat-card-content>
+            <div class="dashboard-number">
+              {{ recipeNumber }}
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="dashboard-card">
+          <mat-card-title>Category Breakdown</mat-card-title>
+          <mat-card-content>
+            <a href="#">View</a>
+          </mat-card-content>
+        </mat-card>
+        <mat-card class="dashboard-card">
+          <mat-card-title>Get Cooking</mat-card-title>
+          <mat-card-content>
+            <a href="#">Start a recipe</a>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <!-- Optionally add more dashboard sections here -->
+    </div>
+  </section>
+}
+ 

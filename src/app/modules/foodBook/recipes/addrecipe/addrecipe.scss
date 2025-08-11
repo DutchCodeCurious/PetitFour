@@ -1,0 +1,73 @@
+// recipe-add.component.scss
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.one-line-fields {
+  display: flex;
+  gap: 1rem; // space between fields
+  margin-bottom: 1rem;
+
+  mat-form-field {
+    flex: 1; // equal width for all three
+  }
+}
+
+.recipe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; // space between form fields
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+
+  button[type="submit"] {
+    align-self: flex-start;
+  }
+}
+
+.ingredient-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  input {
+    flex: 1;
+  }
+
+  button {
+    white-space: nowrap;
+  }
+}
+
+.text-muted {
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.media-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+
+  img {
+    max-width: 100px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+  }
+}

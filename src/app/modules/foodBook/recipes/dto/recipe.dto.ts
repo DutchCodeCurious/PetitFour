@@ -1,5 +1,6 @@
 import { BaseDTO, ID  } from "../../../../common/dto/base.dto";
 import { CourseType } from "../../../../common/enums/course-type.enum";
+import { Unit } from "../../../../common/enums/unit.enum";
 
 export class RecipeDTO extends BaseDTO {
     Title!: string;
@@ -12,7 +13,7 @@ export class RecipeDTO extends BaseDTO {
     Course?: CourseType;
     Status?: string;
     SourceId?: ID;
-    Ingredients?: string[];
+    Ingredients?: RecipeIngredientDTO[];
     Instructions?: string;
     Language?: string;
 }
@@ -43,4 +44,10 @@ export class CuisineDTO extends BaseDTO {
 
 export class TagDTO extends BaseDTO {
     Name!: string;
+}
+
+export class RecipeIngredientDTO {
+  Name!: string;
+  Amount?: number;
+  Unit?: Unit;
 }
