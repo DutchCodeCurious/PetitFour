@@ -15,7 +15,7 @@ export const routes: Routes = [
             {
                 path: 'recipes',
                 loadComponent: () => {
-                    return import('./modules/recipes/recipelist/recipelist').then(m => m.Recipelist);
+                    return import('./modules/foodBook/recipes/recipelist/recipelist').then(m => m.Recipelist);
                 },
             }
         ]

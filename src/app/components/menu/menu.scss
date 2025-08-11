@@ -29,6 +29,7 @@
 }
 
 .dashboard-sidenav {
+  max-width: 10px;
   background: #181a1b;
   color: #f2f2f2;
   min-width: 220px;
@@ -66,24 +67,24 @@
     }
   }
 }
-  ::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item {
-  transition: background 0.2s, color 0.2s;
-}
+//   ::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item {
+//   transition: background 0.2s, color 0.2s;
+// }
 
-::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item:hover,
-::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-focused,
-::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-program-focused {
-  background: #232428 !important;
-}
+// ::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item:hover,
+// ::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-focused,
+// ::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-program-focused {
+//   background: #232428 !important;
+// }
 
-::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item:hover .mat-list-item-content,
-::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-focused .mat-list-item-content,
-::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-program-focused .mat-list-item-content {
-  color: #a970ff !important;
-}
+// ::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item:hover .mat-list-item-content,
+// ::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-focused .mat-list-item-content,
+// ::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-program-focused .mat-list-item-content {
+//   color: #a970ff !important;
+// }
 
-::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item:hover mat-icon,
-::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-focused mat-icon,
-::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-program-focused mat-icon {
-  color: #fff !important;
-}
+// ::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item:hover mat-icon,
+// ::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-focused mat-icon,
+// ::ng-deep .dashboard-sidenav mat-nav-list .mat-list-item.cdk-program-focused mat-icon {
+//   color: #fff !important;
+// }

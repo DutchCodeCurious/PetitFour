@@ -1,10 +1,10 @@
-import { ID } from "../../../common/dto/base.dto";
-import { CourseType } from "../../../common/enums/course-type.enum";
+import { ID } from "../../../../common/dto/base.dto";
+import { CourseType } from "../../../../common/enums/course-type.enum";
 import { RecipeIngredientDTO } from "../../ingredients/dto/recipe-ingredient.dto";
 import { InstructionStepDTO, NutritionDTO } from "./recipe.dto";
 
 export class RecipeCreateDTO {
-    Title: string;
+    Title!: string;
     Description?: string;
 
     Servings?: string;
@@ -14,16 +14,16 @@ export class RecipeCreateDTO {
 
     CuisineId?: ID;
     Course?: CourseType;
-    SourceId: ID;
+    SourceId?: ID;
 
     Language?: string;
 
-    Ingredients: RecipeIngredientDTO[];
-    Steps: InstructionStepDTO;
+    Ingredients?: RecipeIngredientDTO[];
+    Steps?: InstructionStepDTO[];
 
     Tags?: string[]; // tag DTOs
     Media?: string[]; // media DTOs
-    Nutrition: NutritionDTO;
+    Nutrition?: NutritionDTO;
 }
 
 // Optional: handy factory for form defaults

@@ -1,10 +1,10 @@
-import { UserRecipeMetaDTO } from "../../../common/dto/userRecipeMeta.dto";
+import { UserRecipeMetaDTO } from "../../../../common/dto/userRecipeMeta.dto";
 import { AuthorDTO, MediaDTO, SourceDTO } from "../../authors/dto/author.dto";
 import { RecipeIngredientDTO } from "../../ingredients/dto/recipe-ingredient.dto";
 import { CuisineDTO, InstructionStepDTO, NutritionDTO, RecipeDTO, TagDTO } from "./recipe.dto";
 
 export class RecipeDetailDTO {
-    Recipe: RecipeDTO;
+    Recipe!: RecipeDTO;
 
     Author?: AuthorDTO;
     Cuisine?: CuisineDTO;
@@ -15,7 +15,7 @@ export class RecipeDetailDTO {
     HeroImage?: MediaDTO;
 
     Ingredients?: RecipeIngredientDTO[];
-    Steps: InstructionStepDTO[];
+    Steps?: InstructionStepDTO[];
     Nutrition?: NutritionDTO;
 
     UserMeta?: UserRecipeMetaDTO;

@@ -1,4 +1,4 @@
-import { RecipeDetailDTO } from "./modules/recipes/dto/recipe-detail.dto";
+import { RecipeDetailDTO } from "./modules/foodBook/recipes/dto/recipe-detail.dto";
 
 export const Users = [
   {
@@ -52,19 +52,20 @@ export const Recipes: RecipeDetailDTO[] = [
       { id: 't1', Name: 'Pasta' },
       { id: 't2', Name: 'Comfort Food' }
     ],
-    Media: [
+    Media: 
       {
         id: 'm1',
         Type: 'image',
         Url: '/assets/images/spaghetti.jpg',
         Alt: 'Spaghetti Bolognese'
       }
-    ],
+    ,
     UserMeta: {
       id: 'um1',
       UserId: 'u1',
       RecipeId: 'r1',
       IsFavorite: true,
+      IsMadeBefore: true,
       Rating: 5,
       Notes: 'Family loves this. Add extra garlic.'
     },
@@ -107,19 +108,20 @@ export const Recipes: RecipeDetailDTO[] = [
       { id: 't3', Name: 'Vegan' },
       { id: 't4', Name: 'Gluten-Free' }
     ],
-    Media: [
+    Media: 
       {
         id: 'm2',
         Type: 'image',
         Url: '/assets/images/chickpea-curry.jpg',
         Alt: 'Chickpea Curry'
       }
-    ],
+    ,
     UserMeta: {
       id: 'um2',
       UserId: 'u2',
       RecipeId: 'r2',
       IsFavorite: false,
+      IsMadeBefore: true,
       Rating: 4
     },
     AvgRating: 4.4
